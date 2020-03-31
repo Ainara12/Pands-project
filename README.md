@@ -1,2 +1,2 @@
 # Pands-project
-Repository created to submit project for Programming &amp; Scripting module
+Repository created to submit project for Programming & Scripting module
