@@ -1,16 +1,16 @@
 
 
-#**Programming and Scripting Project 2020** 
+# Programming and Scripting Project 2020 
 
 This document contains a summary of my efforts to complete the final project for the Programming and Scripting module, along with observations  about the dataset and the references used to complete it. 
 
-##**Project Abstract**  
+## Project Abstract 
 
 My goal with this project is to analyze the Fisher’s Iris data set and reach to a set of conclusions using Python. In order to analyze this dataset, I will use the knowledge I have gained during the completion of this module along with extra resources which I will document here for reference.  
 
-Iris Data set in CSV format downloaded from : https://gist.github.com/netj/8836201
+[Iris Data set in CSV format downloaded from this link](https://gist.github.com/netj/8836201)  
 
-##**Summary of dataset**  
+## Summary of dataset  
 
 **1.History:**
 
@@ -35,10 +35,10 @@ Petal.Width (This is the width of the petal of the flower)
 Species (Species name)  
 
 **References:**  
-https://archive.ics.uci.edu/ml/datasets/Iris  
-https://www.kaggle.com/uciml/iris  
-https://dictionary.cambridge.org/dictionary/english/  
-https://gist.github.com/netj/8836201  
+[Dataset history and details](https://archive.ics.uci.edu/ml/datasets/Iris)    
+[Dataset analysis](https://www.kaggle.com/uciml/iris)   
+[Flower parts definitions](https://dictionary.cambridge.org/dictionary/english/)    
+[Dataset extracted from this resource](https://gist.github.com/netj/8836201)    
 
 
 
