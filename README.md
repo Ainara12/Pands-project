@@ -6,7 +6,8 @@ This document contains a summary of my efforts to complete the final project for
 
 ## Project Abstract 
 
-My goal with this project is to analyze the Fisher’s Iris data set and reach to a set of conclusions using Python. In order to analyze this dataset, I will use the knowledge I have gained during the completion of this module along with extra resources which I will document here for reference.  
+My goal with this project is to analyze the Fisher’s Iris data set and reach to a set of conclusions using Python. 
+One of the main conclusions I want to reach is to confirm if it is  possible to identify the three different species of iris flower just by the size of their features using the plotting tools that Python offers along with a little experimentation at the end of this assignment in which I tried this using *sklearn library*.
 
 [Iris Data set in CSV format downloaded from this link](https://gist.github.com/netj/8836201)  
 
@@ -106,8 +107,43 @@ Observing these  graphic representations above we can reach the following conclu
 
 •	We could try to determine if an iris flower belongs to setosa species looking at its parts measurements specially petal length.
 
+**8. Machine learning approach:**
 
+Following this tutorial : https://www.youtube.com/watch?v=Y17Y_8RK6pc 
+I try to use machine learning through the sklearn module available in Python to try yo make a prediction of which one would be the iris species depending on their features size.See below the process I followed to apply this model to the dataset.  
 
+1.	First I imported *sklearn library* and load *iris dataset* which is included in this library.  
+
+2.	I printed its keys  which are (['target', 'DESCR', 'target_names', 'feature_names', 'data', 'filename'] they are stored as a dictionary.   
+
+3.	And print dataset to see how is stored, we can see that we have a target array which shows a value given to every species of flower ( 0= Setosa, 1=Versicolor and 2= Virginica):
+
+4. I organised data to create first a pair if scatter plots to see the data and if it is right:
+```
+#I set the variable for the function iris.data.T included in sklearn:
+
+features = iris.data.T
+
+#Then I specify the flower parts as features
+
+sepal_length = features[0]
+sepal_width = features[1]
+petal_length = features[2]
+petal_width = features[3]
+
+sepal_length_label = iris.feature_names[0]
+sepal_width_label =iris.feature_names[1]
+petal_length_label = iris.feature_names[2]
+petal_width_label = iris.feature_names[3]  
+
+```
+
+Then I created two scatter plots for each set of variables using *matplotlib* as done in the previous section:  
+
+![](images/scatterplot1ml.png)  
+![](images/scatterplot2ml.png)  
+
+Again we can spot the big diference that setosa has in terms of petal size with the other two types. Taking this into account, Could we predict which type of iris flower we have just having its measurements? In order to see if this is possible to predict with Python I followed the next steps to create a model using *sklearn* functionalities:  
 
 
 
@@ -119,6 +155,7 @@ Observing these  graphic representations above we can reach the following conclu
 [Histogram tutorial in Seaborn](https://www.tutorialspoint.com/seaborn/seaborn_histogram.htm)  
 [Seaborn color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html)  
 [Several variables histogram with Seaborn](https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/)  
+[Machine learning approach using sklearn]( https://www.youtube.com/watch?v=Y17Y_8RK6pc )  
 
 
 
