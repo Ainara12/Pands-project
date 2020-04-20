@@ -54,7 +54,7 @@ My approach was to include these small tasks into different stages with a date t
 
 The first task was to organise the data and have a look into its distribution. I used command df.describe() to see a Summary statistics table to see what is the mean, std, minimum and maximum values within the different variables etc. The generated document containing this summary can be found in this repository as "Summary.txt", I have also included here as an image for reference:  
 
-![](images/statisticstable.jpg)  
+![](images/statisticstable.JPG)  
  
 Looking at these values, we ca see that there is a extensive range concerning sepal and petal sizes, our goal with this analysis is to determine if is possible to classify the three iris species by their parts measurements.
 
