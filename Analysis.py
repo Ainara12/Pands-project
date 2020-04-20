@@ -60,18 +60,18 @@ versicolor=df.loc[df["Species"]=="Iris-versicolor"]
 
 
 sns.relplot(x="SepalLength", y="SepalWidth",hue="Species", data=df) #Here we adjust the features of the scatter plot.
-plt.title("Sepal length & sepal width")# Addint title.
+plt.title("Sepal length & sepal width (cm)",y=0.95)# Adding title.
 
 plt.show()
 
 #Scatterplot 2 - Petal Lenght vs Petal Width
 
 sns.relplot(x="PetalLength", y="PetalWidth",hue="Species", data=df)
-plt.title("Petal length & petal width")
+plt.title("Petal length & petal width (cm)", y=0.95)
 
 plt.show()
 
 
-    
+
 
 
