@@ -42,7 +42,9 @@ PetalLength (This is the length of the petal of the flower in cm)
 PetalWidth (This is the width of the petal of the flower in cm)
 Species (Species name)
 
-**3. Project process:**    
+## Project ##  
+
+**1. Project process:**    
 
 In order to create this project I have divided my work into smaller separate tasks until I was ready to join all and create last version of "Analysis.py". I have also planned my tasks using Github planning and Milestone tools as you can see in this repository.
 My approach was to include these small tasks into different stages with a date to be completed and then follow with the next phase or stage, I created 3 phases with 3 specific milestones. See details of these phases below for reference:  
@@ -51,7 +53,7 @@ My approach was to include these small tasks into different stages with a date t
 2.	Phase 2. I created separate programs to achieve the 3 main tasks and I observe other author’s analysis of this dataset as documented in references section.    
 3.	Phase 3. I put together the tasks to create Analysis.py and added my observations and information into this document.  
 
-**4.Summary statistics table:**  
+**2.Summary statistics table:**  
 
 The first task was to organise the data and have a look into its distribution. I used command df.describe() to see a Summary statistics table to see what is the mean, std, minimum and maximum values within the different variables etc. The generated document containing this summary can be found in this repository as "Summary.txt", I have also included here as an image for reference:  
 
@@ -60,7 +62,7 @@ The first task was to organise the data and have a look into its distribution. I
 Looking at these values, we ca see that there is a extensive range concerning sepal and petal sizes, our goal with this analysis is to determine if is possible to classify the three iris species by their parts measurements.
 
 
-**5.Histogram:**  
+**3.Histograms:**  
 
 Following the procedure and guidelines provided, the second part of the tasks that Analysis.py performs is saving an histogram of every variable into a png file.  
 An histogram is a type of graph used to represent the data distribution by using bins along the range of the data and then drawing bars to show the number of observations that fall in each bin. For the creation of these histograms I have used *matplotlib* , *pandas* and *seaborn* libraries. I have selected *seaborn* libraries to give some more dimension to my plots as it includes nice looking graphics.  
@@ -85,7 +87,7 @@ I have also added an histogram that shows the variables and species category in 
 
 Observing these histograms we can already see at first glance how some of the species have very different range of values in some of their attributes, for example setosa in relation to the other two types of iris flowers, seems to have smaller petals.  
 
-**6.Scatter plot:**  
+**4.Scatter plots:**  
 
 After the histogram section we move down to the scatter plot representation of this data. I have created two scatter plots combining two variables ( sepal length & sepal width) and (petal length & petal width) and separating by species using color. Scatter plots are an useful type of graphic when we want to see the relation between two variables.
  
@@ -97,7 +99,7 @@ On the other hand the second scatter plot we can spot that setosa species seem t
 ![](images/scatterplot2.png)  
 
  
-**7.Conclusions:** 
+**7.Conclusions from plots:** 
 
 Observing these  graphic representations above we can reach the following conclusions in relation to this data set:  
 
@@ -110,7 +112,7 @@ Observing these  graphic representations above we can reach the following conclu
 **8. Machine learning approach:**
 
 Following this tutorial : https://www.youtube.com/watch?v=Y17Y_8RK6pc 
-I try to use machine learning through the sklearn module available in Python to try yo make a prediction of which one would be the iris species depending on their features size.See below the process I followed to apply this model to the dataset.  
+I experimentted with machine learning using the  *sklearn* module available in Python to try yo make a prediction of which one would be the iris species depending on their features size.See below the process I followed to apply this model to the dataset.  
 
 1.	First I imported *sklearn library* and load *iris dataset* which is included in this library.  
 
@@ -143,7 +145,51 @@ Then I created two scatter plots for each set of variables using *matplotlib* as
 ![](images/scatterplot1ml.png)  
 ![](images/scatterplot2ml.png)  
 
-Again we can spot the big diference that setosa has in terms of petal size with the other two types. Taking this into account, Could we predict which type of iris flower we have just having its measurements? In order to see if this is possible to predict with Python I followed the next steps to create a model using *sklearn* functionalities:  
+Again we can spot the big diference that setosa has in terms of petal size with the other two types. Taking this into account, Could we predict which type of iris flower we have just having its measurements?
+For the creation of this model I follow the K Nearest Neighbors algorithm. This algorithm is based storing all available cases and classifies new cases based on a similarity measure. In this case we have chosen  1 as the closest neighbor to be considered. In order to see if this is possible to predict with Python I followed the next steps to create a model using *sklearn* functionalities:  
+
+
+1. We divided our data in two , as I want to have a portion for testing the model accuracy and another part to make the predictions. In this case I follow the split 25% for test, and 75% for the rest as the tutorial did.  
+
+```
+X_train, X_test, y_train, y_test = train_test_split(iris["data"],iris["target"])
+knn= KNeighborsClassifier(n_neighbors=1)
+```
+2.Then I add to my fit function training data and training data from our target( the information we want to predict). 
+ ```
+knn.fit(X_train, y_train)
+``` 
+3. We create a variable then for a new set of meauserements from a new flower that we want to test. 
+Lets try entering this array of number ( using *numpy* library) and see if the model can predict which species this new flower belongs to by using the prediction function:
+
+``` 
+X_new = np.array([[0.3,1.0,3.5,6.0]]) #enter an array of float values for each flower part
+prediction = knn.predict(X_new)
+print(prediction) 
+``` 
+4. We get this result which indicates that these particular flower with these array of values corresponding to its features belongs to the iris virginica species.  
+
+![](images/predictionresult.png)  
+
+
+![](images/irisvirginica.jpg)  
+
+To be able to confirm that this example is accurate, I have also attemptd to see how we can test the model and see what is the accuracy. To do so I followed these steps to analyse the testing data we have split in the previous step:  
+
+1. We use for this operation the functionality *knn.score* which shows a score between 0 and 1 that evaluates the accuracy of the data:
+
+``` 
+print(knn.score(X_test, y_test))
+``` 
+In this case we get a pretty high score which means that we have 0.97 % accuracy that for the value set we have being given in this example the new flower belongs to iris virginica species, based on the data we have provided to the model. 
+
+![](images/accuracyexample.png)  
+
+**9. General conclusion:**  
+
+From this study I have done and the evidence we have gathered , we cannot really confirm 100% that an specific iris flower belongs to any of the three species. However, based on the data we have at the moment (150 instances) we can predict with high accuracy that iris setosa have wider sepals and smallest petals than the other two species while generally iris versicolor and virginica have wider and longer petals and also longer sepals than setosa. 
+
+
 
 
 
@@ -154,7 +200,8 @@ Again we can spot the big diference that setosa has in terms of petal size with 
 [Dataset extracted from this resource](https://gist.github.com/netj/8836201)  
 [Histogram tutorial in Seaborn](https://www.tutorialspoint.com/seaborn/seaborn_histogram.htm)  
 [Seaborn color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html)  
-[Several variables histogram with Seaborn](https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/)  
+[Several variables histogram with Seaborn](https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/)
+[K nearest neighborg algorithm](https://www.saedsayad.com/k_nearest_neighbors.htm)
 [Machine learning approach using sklearn]( https://www.youtube.com/watch?v=Y17Y_8RK6pc )  
 
 
