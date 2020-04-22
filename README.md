@@ -159,7 +159,7 @@ knn= KNeighborsClassifier(n_neighbors=1)
  ```
 knn.fit(X_train, y_train)
 ``` 
-3. We create a variable then for a new set of meauserements from a new flower that we want to test. 
+3. We create a variable then for a new set of measurements from a new flower that we want to test. 
 Lets try entering this array of number ( using *numpy* library) and see if the model can predict which species this new flower belongs to by using the prediction function:
 
 ``` 
@@ -174,7 +174,7 @@ print(prediction)
 
 ![](images/irisvirginica.jpg)  
 
-To be able to confirm that this example is accurate, I have also attemptd to see how we can test the model and see what is the accuracy. To do so I followed these steps to analyse the testing data we have split in the previous step:  
+To be able to confirm that this example is accurate, I have also added the option to test the model and see what is the accuracy. To do so I followed these steps to analyse the testing data we have split in the previous step:  
 
 1. We use for this operation the functionality *knn.score* which shows a score between 0 and 1 that evaluates the accuracy of the data:
 
@@ -187,9 +187,8 @@ In this case we get a pretty high score which means that we have 0.97 % accuracy
 
 **9. General conclusion:**  
 
-From this study I have done and the evidence we have gathered , we cannot really confirm 100% that an specific iris flower belongs to any of the three species. However, based on the data we have at the moment (150 instances) we can predict with high accuracy that iris setosa have wider sepals and smallest petals than the other two species while generally iris versicolor and virginica have wider and longer petals and also longer sepals than setosa. 
-
-
+From this study I have done and based on the data we have at the moment (150 instances), we can say that iris setosa have wider sepals and smallest petals than the other two species while generally iris versicolor and virginica have wider and longer petals and also longer sepals than setosa. 
+Taking this into account, we can predict with high accuracy ( over 90% accuracy) to which species an iris flower belongs to just adding its measurements to our model. 
 
 
 
@@ -197,7 +196,9 @@ From this study I have done and the evidence we have gathered , we cannot really
 [Dataset history and details](https://archive.ics.uci.edu/ml/datasets/Iris)    
 [Dataset analysis](https://www.kaggle.com/uciml/iris)   
 [Flower parts definitions](https://dictionary.cambridge.org/dictionary/english/)    
-[Dataset extracted from this resource](https://gist.github.com/netj/8836201)  
+[Dataset extracted from this resource](https://gist.github.com/netj/8836201) 
+[Analysis of iris dataset taken as reference for some parts of the project](https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342)  
+[How to work with CSV files in Python](https://realpython.com/python-csv/)  
 [Histogram tutorial in Seaborn](https://www.tutorialspoint.com/seaborn/seaborn_histogram.htm)  
 [Seaborn color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html)  
 [Several variables histogram with Seaborn](https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/)
