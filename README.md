@@ -200,10 +200,10 @@ Taking this into account, we can predict with high accuracy ( over 90% accuracy)
 [Analysis of iris dataset taken as reference for some parts of the project](https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342)  
 [How to work with CSV files in Python](https://realpython.com/python-csv/)  
 [Histogram tutorial in Seaborn](https://www.tutorialspoint.com/seaborn/seaborn_histogram.htm)  
-[Seaborn color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html)  
-[Several variables histogram with Seaborn](https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/)
-[K nearest neighborg algorithm](https://www.saedsayad.com/k_nearest_neighbors.htm)
-[Machine learning approach using sklearn]( https://www.youtube.com/watch?v=Y17Y_8RK6pc )  
+[Seaborn color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html)    
+[Several variables histogram with Seaborn](https://python-graph-gallery.com/25-histogram-with-several-variables-seaborn/)  
+[K nearest neighborg algorithm](https://www.saedsayad.com/k_nearest_neighbors.htm)  
+[Machine learning approach using sklearn]( https://www.youtube.com/watch?v=Y17Y_8RK6pc )   
 
 
 
