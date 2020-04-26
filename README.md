@@ -31,7 +31,7 @@ For those who are not familiar with the two main concepts of this dataset, see d
 
 **2.Data set variables:** 
 
-The way the date is organised is as follows:  
+The way the data is organised is as follows:  
 There are four columns with the different flower parts measures in centimetres and the fifth column is the species of the flower observed.
  
 *Variables:*  
@@ -46,28 +46,28 @@ Species (Species name)
 
 **1. Project process:**    
 
-In order to create this project I have divided my work into smaller separate tasks until I was ready to join all and create last version of "Analysis.py". I have also planned my tasks using Github planning and Milestone tools as you can see in this repository.
-My approach was to include these small tasks into different stages with a date to be completed and then follow with the next phase or stage, I created 3 phases with 3 specific milestones. See details of these phases below for reference:  
+In order to create this project I have divided my work into smaller separate tasks until I was ready to join all and create the final version of "Analysis.py". I have also planned my tasks using Github planning and Milestone tools as you can see in this repository.
+My approach was to split these small tasks into different stages with a date to be completed, and to then proceed with the next phase or stage. I created 3 phases with 3 specific milestones. See details of these phases below for reference:  
 
 1.	Phase 1. Documentation  
 2.	Phase 2. I created separate programs to achieve the 3 main tasks and I observe other author’s analysis of this dataset as documented in references section.    
-3.	Phase 3. I put together the tasks to create Analysis.py and added my observations and information into this document.  
+3.	Phase 3. I put together the tasks to create Analysis.py and added my observations and information to this document.  
 
 **2.Summary statistics table:**  
 
-The first task was to organise the data and have a look into its distribution. I used command df.describe() to see a Summary statistics table to see what is the mean, std, minimum and maximum values within the different variables etc. The generated document containing this summary can be found in this repository as "Summary.txt", I have also included here as an image for reference:  
+The first task was to organise the data and have a look at its distribution. I used command df.describe() to see a Summary statistics table to see what is the mean, std dev, minimum and maximum values within the different variables etc. The generated document containing this summary can be found in this repository as "Summary.txt", I have also included here an image for reference:  
 
 ![](images/statisticstable.JPG)  
  
-Looking at these values, we ca see that there is a extensive range concerning sepal and petal sizes, our goal with this analysis is to determine if is possible to classify the three iris species by their parts measurements.
+Looking at these values, we can see that there is an extensive range of sepal and petal sizes. Our goal with this analysis is to determine if is possible to classify the three iris species by their components measurements.
 
 
 **3.Histograms:**  
 
-Following the procedure and guidelines provided, the second part of the tasks that Analysis.py performs is saving an histogram of every variable into a png file.  
-An histogram is a type of graph used to represent the data distribution by using bins along the range of the data and then drawing bars to show the number of observations that fall in each bin. For the creation of these histograms I have used *matplotlib* , *pandas* and *seaborn* libraries. I have selected *seaborn* libraries to give some more dimension to my plots as it includes nice looking graphics.  
+Following the procedure and guidelines provided, the second part of the tasks that Analysis.py performs is saving a histogram of every variable into a png file.  
+A histogram is a type of graph used to represent the data distribution by using bins along the range of the data and then drawing bars to show the number of observations that fall in each bin. For the creation of these histograms I have used *matplotlib* , *pandas* and *seaborn* libraries. I have selected *seaborn* libraries to give some more dimension and colour to my plots.  
 
-In order to move along within the Analysis you just need to get to the histogram section and create the file, for this I used command savefig and add name of the png file.The png file is added to this repository in the images folder as reference.  
+In order to move along within the Analysis you just need to get to the histogram section and create the file, for this I used command savefig and add name of the png file. The png file is added to this repository in the images folder as reference.  
 Instead of creating a individual file for every histogram I have added the four histograms to a single graphic which will be saved as a single png by the program.
 
 *4 variables histogram*
@@ -75,9 +75,9 @@ Instead of creating a individual file for every histogram I have added the four 
 ![](images/Histogram.png)  
 
  
-With the histogram we can see the range of values for every of the four variables ( sepal length, sepal width, petal length and petal width).  
+With the histogram we can see the range of species-secific values for each of the four variables ( sepal length, sepal width, petal length and petal width).  
 
-I have also added an histogram that shows the variables and species category in the same plot , as a reference to see the difference in distribution within the three types of iris flowers.  
+I have also added a histogram that shows the variables and species category in the same plot , as a reference to see the difference in distribution within the three types of iris flowers.  
 
 ![](images/Histsepallength.png)  
 ![](images/Histsepalwidth.png)  
@@ -85,13 +85,13 @@ I have also added an histogram that shows the variables and species category in 
 ![](images/Histpetalwidth.png)  
 
 
-Observing these histograms we can already see at first glance how some of the species have very different range of values in some of their attributes, for example setosa in relation to the other two types of iris flowers, seems to have smaller petals.  
+Observing these histograms we can already see at first glance how some of the species have very different ranges of values in some of their attributes, for example setosa in relation to the other two types of iris flowers, seems to have smaller petals.  
 
 **4.Scatter plots:**  
 
-After the histogram section we move down to the scatter plot representation of this data. I have created two scatter plots combining two variables ( sepal length & sepal width) and (petal length & petal width) and separating by species using color. Scatter plots are an useful type of graphic when we want to see the relation between two variables.
+After the histogram section we move down to the scatter plot representation of this data. I have created two scatter plots combining two variables ( sepal length & sepal width) and (petal length & petal width) and separating by species using color. Scatter plots are a useful type of graphic when we want to see the relation between two variables.
  
-Observing the first scatter plot, we can see that it seems to be a clear difference between the setosa species and the other two. Setosa iris flowers seem to have wider sepals than the versicolor and virginica species, while the other two species seem to have longer sepals.  
+Observing the first scatter plot, there seems to be a clear difference between the setosa species and the other two. Setosa iris flowers seem to have wider sepals than the versicolor and virginica species, while the other two species seem to have longer sepals.  
 
 ![](images/scatterplot1.png)  
 
@@ -99,28 +99,28 @@ On the other hand the second scatter plot we can spot that setosa species seem t
 ![](images/scatterplot2.png)  
 
  
-**7.Conclusions from plots:** 
+**5.Conclusions from plots:** 
 
-Observing these  graphic representations above we can reach the following conclusions in relation to this data set:  
+Observing these graphic representations above we can reach the following conclusions in relation to this data set:  
 
--Versicolor and virginica species of iris flower seem to be in general bigger in terms of petal size, with virginica having the widest and longest petal sizes, while setosa is clearly smaller and narrower.  
+- Versicolor and virginica species of iris flower seem to be generally bigger in terms of petal size, with virginica having the widest and longest petal sizes, while setosa is clearly smaller and narrower.  
 
--In sepal size terms, we have wider and shorter sepals in setosa species. For versicolor and virginica , sepals size seems to be similar.  
+- In sepal size terms, we have wider and shorter sepals in setosa species. For versicolor and virginica , sepals size seems to be similar.  
 
-•	We could try to determine if an iris flower belongs to setosa species looking at its parts measurements specially petal length.
+-	We can determine if an iris flower belongs to setosa species looking at its parts measurements, particularly petal length.
 
-**8. Machine learning approach:**
+**6. Machine learning approach:**
 
 Following this tutorial : https://www.youtube.com/watch?v=Y17Y_8RK6pc 
-I experimentted with machine learning using the  *sklearn* module available in Python to try yo make a prediction of which one would be the iris species depending on their features size.See below the process I followed to apply this model to the dataset.  
+I experimented with machine learning using the *sklearn* module available in Python to make a prediction of which one would be the iris species depending on their features size. See below the process I followed to apply this model to the dataset.  
 
-1.	First I imported *sklearn library* and load *iris dataset* which is included in this library.  
+1.	First I imported *sklearn library* and loaded *iris dataset* which is included in this library.  
 
-2.	I printed its keys  which are (['target', 'DESCR', 'target_names', 'feature_names', 'data', 'filename'] they are stored as a dictionary.   
+2.	I printed its keys which are (['target', 'DESCR', 'target_names', 'feature_names', 'data', 'filename'] they are stored as a dictionary.   
 
-3.	And print dataset to see how is stored, we can see that we have a target array which shows a value given to every species of flower ( 0= Setosa, 1=Versicolor and 2= Virginica):
+3.	I printed the dataset to see how it's stored; we can see that we have a target array which shows a value given to every species of flower ( 0= Setosa, 1=Versicolor and 2= Virginica):
 
-4. I organised data to create first a pair if scatter plots to see the data and if it is right:
+4. I organised data to create first a pair of scatter plots to see the data and if it is right:
 ```
 #I set the variable for the function iris.data.T included in sklearn:
 
@@ -185,7 +185,7 @@ In this case we get a pretty high score which means that we have 0.97 % accuracy
 
 ![](images/accuracyexample.png)  
 
-**9. General conclusion:**  
+**7. General conclusion:**  
 
 From this study I have done and based on the data we have at the moment (150 instances), we can say that iris setosa have wider sepals and smallest petals than the other two species while generally iris versicolor and virginica have wider and longer petals and also longer sepals than setosa. 
 Taking this into account, we can predict with high accuracy ( over 90% accuracy) to which species an iris flower belongs to just adding its measurements to our model. 
