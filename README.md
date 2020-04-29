@@ -155,7 +155,7 @@ For the creation of this model I follow the K Nearest Neighbors algorithm. This 
 X_train, X_test, y_train, y_test = train_test_split(iris["data"],iris["target"])
 knn= KNeighborsClassifier(n_neighbors=1)
 ```
-2.Then I add to my fit function training data and training data from our target( the information we want to predict). 
+2.Then I add to my *fit* function training data and training data from our target( the information we want to predict). 
  ```
 knn.fit(X_train, y_train)
 ``` 
@@ -181,14 +181,14 @@ To be able to confirm that this example is accurate, I have also added the optio
 ``` 
 print(knn.score(X_test, y_test))
 ``` 
-In this case we get a pretty high score which means that we have 0.97 % accuracy that for the value set we have being given in this example the new flower belongs to iris virginica species, based on the data we have provided to the model. 
+In this case we get a pretty high score ( score goes from 0 to 1) which means that we have 0.97 accuracy that for the value set we have being given in this example the new flower belongs to iris virginica species, based on the data we have provided to the model. 
 
 ![](images/accuracyexample.png)  
 
 **7. General conclusion:**  
 
-From this study I have done and based on the data we have at the moment (150 instances), we can say that iris setosa have wider sepals and smallest petals than the other two species while generally iris versicolor and virginica have wider and longer petals and also longer sepals than setosa. 
-Taking this into account, we can predict with high accuracy ( over 90% accuracy) to which species an iris flower belongs to just adding its measurements to our model. 
+From this study I have done and based on the data we have at the moment (150 instances), we can say that iris setosa have wider sepals and smaller petals than the other two species while generally iris versicolor and virginica have wider and longer petals and also longer sepals than setosa. 
+Taking this into account, we can predict with high accuracy  to which species an iris flower belongs to just adding its measurements to our model. 
 
 
 
