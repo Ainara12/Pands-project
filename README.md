@@ -46,7 +46,7 @@ Species (Species name)
 
 **1. Project process:**    
 
-In order to create this project I have divided my work into smaller separate tasks until I was ready to join all and create the final version of "Analysis.py". I have also planned my tasks using Github planning and Milestone tools as you can see in this repository.
+In order to create this project I have divided my work into smaller separate tasks until I was ready to join all and create the final version of ["Analysis.py"](https://github.com/Ainara12/Pands-project/blob/master/Analysis.py). I have also planned my tasks using Github planning and Milestone tools as you can see in this repository.
 My approach was to split these small tasks into different stages with a date to be completed, and to then proceed with the next phase or stage. I created 3 phases with 3 specific milestones. See details of these phases below for reference:  
 
 1.	Phase 1. Documentation  
@@ -55,7 +55,7 @@ My approach was to split these small tasks into different stages with a date to 
 
 **2.Summary statistics table:**  
 
-The first task was to organise the data and have a look at its distribution. I used command df.describe() to see a Summary statistics table to see what is the mean, std dev, minimum and maximum values within the different variables etc. The generated document containing this summary can be found in this repository as "Summary.txt", I have also included here an image for reference:  
+The first task was to organise the data and have a look at its distribution. I used command df.describe() to see a Summary statistics table to show what is the mean, std dev, minimum and maximum values within the different variables etc. The generated document containing this summary can be found in this repository as ["Summary.txt"](https://github.com/Ainara12/Pands-project/blob/master/Summary.txt). I have also included here an image for reference:  
 
 ![](images/statisticstable.JPG)  
  
@@ -67,7 +67,7 @@ Looking at these values, we can see that there is an extensive range of sepal an
 Following the procedure and guidelines provided, the second part of the tasks that Analysis.py performs is saving a histogram of every variable into a png file.  
 A histogram is a type of graph used to represent the data distribution by using bins along the range of the data and then drawing bars to show the number of observations that fall in each bin. For the creation of these histograms I have used *matplotlib* , *pandas* and *seaborn* libraries. I have selected *seaborn* libraries to give some more dimension and colour to my plots.  
 
-In order to move along within the Analysis you just need to get to the histogram section and create the file, for this I used command savefig and add name of the png file. The png file is added to this repository in the images folder as reference.  
+In order to move along within the Analysis you just need to get to the histogram section and create the file, for this I used command savefig and add name of the png file. The png file is added to this repository in the images folder [(histogram)](https://github.com/Ainara12/Pands-project/blob/master/images/Histogram.png) as reference.  
 Instead of creating a individual file for every histogram I have added the four histograms to a single graphic which will be saved as a single png by the program.
 
 *4 variables histogram*
@@ -89,7 +89,7 @@ Observing these histograms we can already see at first glance how some of the sp
 
 **4.Scatter plots:**  
 
-After the histogram section we move down to the scatter plot representation of this data. I have created two scatter plots combining two variables ( sepal length & sepal width) and (petal length & petal width) and separating by species using color. Scatter plots are a useful type of graphic when we want to see the relation between two variables.
+After the histogram section we move down to the scatter plot representation of this data. I have created two scatter plots combining two variables ( sepal length & sepal width) and (petal length & petal width) and separating by species using color. Scatter plots are a useful type of graphic when we want to see the relation between two variables.(You can access scatter plots through these links:[ Scatter plot 1 ](https://github.com/Ainara12/Pands-project/blob/master/images/scatterplot1.png)[Scatter plot 2](https://github.com/Ainara12/Pands-project/blob/master/images/scatterplot2.png)).
  
 Observing the first scatter plot, there seems to be a clear difference between the setosa species and the other two. Setosa iris flowers seem to have wider sepals than the versicolor and virginica species, while the other two species seem to have longer sepals.  
 
@@ -112,7 +112,9 @@ Observing these graphic representations above we can reach the following conclus
 **6. Machine learning approach:**
 
 Following this tutorial : https://www.youtube.com/watch?v=Y17Y_8RK6pc 
-I experimented with machine learning using the *sklearn* module available in Python to make a prediction of which one would be the iris species depending on their features size. See below the process I followed to apply this model to the dataset.  
+I experimented with machine learning using the *sklearn* module available in Python to make a prediction of which one would be the iris species depending on their features size.I have added this analysis as a separate program which I named "machinelearning.py" as a different approach to analyse this data set and use it to predict results. The code is available in this repository as [machinelearning.py](https://github.com/Ainara12/Pands-project/blob/master/machinelearning.py).
+
+See below the process I followed to apply this model to the dataset.  
 
 1.	First I imported *sklearn library* and loaded *iris dataset* which is included in this library.  
 
@@ -140,7 +142,7 @@ petal_width_label = iris.feature_names[3]
 
 ```
 
-Then I created two scatter plots for each set of variables using *matplotlib* as done in the previous section:  
+Then I created two scatter plots for each set of variables using *matplotlib* as done in the previous section (you can ccess to scatter plot in this repository using these links:[Scatter plot 1](https://github.com/Ainara12/Pands-project/blob/master/images/scatterplot1ml.png)[Scatter plot 2](https://github.com/Ainara12/Pands-project/blob/master/images/scatterplot2ml.png)):  
 
 ![](images/scatterplot1ml.png)  
 ![](images/scatterplot2ml.png)  
