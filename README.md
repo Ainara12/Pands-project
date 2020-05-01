@@ -198,7 +198,7 @@ Taking this into account, we can predict with high accuracy  to which species an
 [Dataset history and details](https://archive.ics.uci.edu/ml/datasets/Iris)    
 [Dataset analysis](https://www.kaggle.com/uciml/iris)   
 [Flower parts definitions](https://dictionary.cambridge.org/dictionary/english/)    
-[Dataset extracted from this resource](https://gist.github.com/netj/8836201) 
+[Dataset extracted from this resource](https://gist.github.com/netj/8836201)   
 [Analysis of iris dataset taken as reference for some parts of the project](https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342)  
 [How to work with CSV files in Python](https://realpython.com/python-csv/)  
 [Histogram tutorial in Seaborn](https://www.tutorialspoint.com/seaborn/seaborn_histogram.htm)  
